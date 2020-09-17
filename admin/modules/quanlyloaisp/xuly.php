@@ -4,7 +4,7 @@
 	$tenloaisp=$_POST['tenloaisp'];
 	$maloaisp=$_POST['maloaisp'];
 	if(isset($_POST['them'])){
-		$sql="insert into loaisp (tenloaisp,maloaisp) values ('$tenloaisp','$maloaisp')";
+		$sql="insert into loaisp (tenloaisp,maloaisp) values (N'$tenloaisp',N'$maloaisp')";
 		sqlsrv_query($conn,$sql);
 		header('location:../../welcome.php?quanly=quanlyloaisp&ac=them');
 	}elseif(isset($_POST['sua'])){

@@ -1,0 +1,188 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+}
+.wrapper{
+	background-color:#ddd;
+	width:1210px;
+	height:auto;
+	border:1px solid black;
+	margin:auto;
+	background:#030;
+}
+.tren{
+	
+	width:100%;
+	height:auto;
+	background:#030;
+}
+.tren ul{
+	width:100%;
+	height:auto;
+	list-style:none;
+}
+.tren ul li{
+	float:right;
+	text-align:right;
+	margin-left:20px;	
+}
+.tren ul li a{
+	text-decoration:none;
+	color:#FFF;
+}
+.tren a:hover{
+	text-decoration:underline;
+}
+.header{
+	width:100%;
+	height:auto;
+}
+.menu{
+	width:100%;
+	height:40px;
+	background:#030;
+	text-transform:uppercase;
+}
+.menu ul{
+	width:100%;
+	height:100%;
+	list-style:none;
+}
+.menu ul li{
+	float:left;
+	line-height:40px;
+	margin-left:10px;
+}
+.menu ul li a{
+	color:#FFF;
+	text-decoration:none;
+}
+.menu ul li:hover{
+	background:#0F0;
+}
+.quangcao{
+	width:100%;
+	height:auto;
+	background:#F90;
+	color:#FFF;
+	font-size:18px;
+}
+.content{
+	width:100%;
+	height:auto;
+	background:#030;
+}
+
+.content h2 {
+	color:#FFF;
+}
+
+.content p {
+	color:#FFF;
+}
+
+.add1
+{
+	padding-right:10px;
+	float:left;
+}
+.add2
+{
+	padding:0;
+	float:right;
+	line-height:10px;
+}
+
+.left{
+	width:200px;
+	height:485px;
+	border:1px solid white;
+	float:left;
+	text-transform:uppercase;
+}
+.danhsachsanpham ul{
+	width:100%;
+	height:auto;
+	list-style:none;
+}
+.danhsachsanpham ul li{
+	margin-left:10px;
+	margin:5px;
+}
+.danhsachsanpham a{
+	text-decoration:none;
+	color:white;
+}
+.danhsachsanpham a:hover{
+	text-decoration:underline;
+}
+.danhsachlinhkien ul{
+	width:100%;
+	height:auto;
+	list-style:none;
+}
+.danhsachlinhkien ul li{
+	margin-left:10px;
+	margin:5px;
+}
+.danhsachlinhkien a{
+	text-decoration:none;
+	color:white;
+}
+.danhsachlinhkien a:hover{
+	text-decoration:underline;
+}
+.right{
+	width:995px;
+	height:auto;
+	float:left;
+	color:#09C;
+}
+.dongxeall ul{
+	width:100%;
+	list-style:none;
+}
+.dongxeall ul li{
+	width:150px;
+	height:auto;
+	text-align:center;
+	float:left;
+	margin:7px;
+}
+.dongxeall ul li a{
+	text-decoration:none;
+}
+.linhkienall ul{
+	width:100%;
+	list-style:none;
+}
+.linhkienall ul li{
+	width:150px;
+	height:auto;
+	text-align:center;
+	float:left;
+	margin:7px;
+}
+.linhkienall ul li a{
+	text-decoration:none;
+}
+.clear{
+	clear:both;
+}
+.footer{
+	-moz-border-radius-bottomleft: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+	width:100%;
+	height:auto;
+	border:1px solid #FFF;
+	background:#030;
+}
+.congty ul li{
+	list-style:none;
+	color:#FFF;
+}
+
