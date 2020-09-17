@@ -12,7 +12,7 @@
 				}else{
 					$trg1=($g_trangsp*6)-6;
 				}
-                $sql_all="select * from chitietsp limit $trg1,6";
+                $sql_all="select * from chitietsp limit $trg1,5";
                 $params = array();
                 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
                 $query_all=sqlsrv_query($conn,$sql_all,$params,$options);
@@ -22,7 +22,7 @@
                         <div class="dongxeall">
                             <ul>
                              <?php
-                            while($dong_all=sqlsrv_fetch_array($query_all)){
+                                while($dong_all=sqlsrv_fetch_array($query_all)){
                             ?>
                                 <li><a href="index.php?xem=chitietsanpham&id=<?php echo $dong_all['id_sp'] ?>">
                                     <img src="admincp/modules/quanlychitietsp/uploads/<?php echo $dong_all['hinhanh'] ?>" width="150" height="100" />
@@ -34,12 +34,14 @@
                             }
                             ?>
                             </ul>
-                        </div><!--ket thuc tatcaxe-->
+                        </div>
                         <p style="clear:both">
                     </p>
                     Trang:
 					<?php
-						$sql_trang=sqlsrv_query($conn,"select * from chitietsp");
+                        $params = array();
+                        $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+						$sql_trang=sqlsrv_query($conn,"select * from chitietsp",$params,$options);
 						$count=sqlsrv_num_rows($sql_trang);
 						$t1=ceil($count/5);
 						for($a=1;$a<=$t1;$a++){
@@ -89,12 +91,14 @@
                         }
                         ?>
                         </ul>
-                    </div><!--ket thuc tatlinhkien-->
+                    </div>
                     <p style="clear:both">
                     </p>
                     Trang:
 					<?php
-						$sql_trang=sqlsrv_query($conn,"select * from chitietlk");
+                        $params = array();
+                        $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+						$sql_trang=sqlsrv_query($conn,"select * from chitietlk",$params,$options);
 						$count1=sqlsrv_num_rows($sql_trang);
 						$t2=ceil($count1/5);
 						for($b=1;$b<=$t2;$b++){
