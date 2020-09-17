@@ -8,7 +8,7 @@
                 <?php
 				while($dong_sp=sqlsrv_fetch_array($query)){
 				?>
-                	<li style="background: #ffe5e5;"><a href="index.php?xem=chitietloaisanpham&id=<?php echo $dong_sp['id_loaisp'] ?>"><?php echo $dong_sp['tenloaisp'] ?></a></li>
+                	<li style="background: #ffe5e5;color:black;"><a href="index.php?xem=chitietloaisanpham&id=<?php echo $dong_sp['id_loaisp'] ?>"><?php echo $dong_sp['tenloaisp'] ?></a></li>
                   <?php
 					}
 				  ?>
@@ -24,7 +24,7 @@
                 	 <?php
 				while($dong_lk=sqlsrv_fetch_array($query)){
 				?>
-                	<li style="background: #ffe5e5;"><a href="index.php?xem=chitietloailinhkien&id=<?php echo $dong_lk['id_loailk'] ?>"><?php echo $dong_lk['tenloailk'] ?></a></li>
+                	<li style="background: #ffe5e5;color:black;"><a href="index.php?xem=chitietloailinhkien&id=<?php echo $dong_lk['id_loailk'] ?>"><?php echo $dong_lk['tenloailk'] ?></a></li>
                   <?php
 					}
 				  ?>

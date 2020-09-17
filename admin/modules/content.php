@@ -7,6 +7,8 @@
 		$tam='';
 	}if($tam=='quanlyloaisp'){
 		include('modules/quanlyloaisp/main.php');
+	}elseif($tam=='quanlychitietsp'){
+		include('modules/quanlychitietsp/main.php');
 	}elseif($tam=='trangchu'){
 		include('modules/trangchu.php');
 	}else{

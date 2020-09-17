@@ -12,7 +12,7 @@
 </table>
 <table width="350" height="auto" style="float:left; margin-left:20px; margin-top:5px; text-transform:uppercase; line-height:40px"
    <tr>
-    <td>Tên thức uống:<p style="color:white"><?php echo $dong_chitietlk['tenlk'] ?></p>
+    <td>Tên thức uống:<p style="color:black"><?php echo $dong_chitietlk['tenlk'] ?></p>
     				<p style="color:#0F0">Giá thức uống:<?php echo $dong_chitietlk['gia']?> <?php echo "VNĐ" ?></p>
   					<a href="index.php?xem=giohang&add=<?php echo $dong_chitietlk['id_lk'] ?>"><img src="img/mua.PNG" width="150" height="40" style="float:left; border-radius:15px"/></a>
   	</td>

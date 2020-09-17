@@ -12,7 +12,7 @@
 				}else{
 					$trg1=($g_trangsp*6)-6;
 				}
-                $sql_all="select * from chitietsp limit $trg1,5";
+                $sql_all="SELECT * FROM chitietsp ORDER BY id_sp OFFSET $trg1 ROWS FETCH NEXT 5 ROWS ONLY";
                 $params = array();
                 $options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
                 $query_all=sqlsrv_query($conn,$sql_all,$params,$options);
@@ -26,7 +26,7 @@
                             ?>
                                 <li><a href="index.php?xem=chitietsanpham&id=<?php echo $dong_all['id_sp'] ?>">
                                     <img src="admincp/modules/quanlychitietsp/uploads/<?php echo $dong_all['hinhanh'] ?>" width="150" height="100" />
-                                    <p style="color:white;"><?php echo $dong_all['tensp'] ?></p>
+                                    <p style="color:black;"><?php echo $dong_all['tensp'] ?></p>
                                     <p style="color:#0C0;"><?php echo $dong_all['gia']?> <?php echo "VNĐ" ?></p>
                                     <p style="color:#999;">Đặt món</p>
                                 </a></li>
@@ -71,7 +71,7 @@
 				}else{
 					$trg=($g_tranglk*5)-5;
 				}
-				$sql_all="select * from chitietlk limit $trg,5";
+                $sql_all="SELECT * FROM chitietlk ORDER BY id_lk OFFSET $trg ROWS FETCH NEXT 5 ROWS ONLY";
                 $query_all=sqlsrv_query($conn,$sql_all);
         ?>     
                 <p style="text-align:center;color:#0F0;padding:10px;text-transform:uppercase;"><b>Thức uống</b></p>
@@ -83,7 +83,7 @@
                         ?>
                             <li><a href="index.php?xem=chitietlinhkien&id=<?php echo $dong_all['id_lk'] ?>">
                                 <img src="admincp/modules/quanlychitietlk/uploads/<?php echo $dong_all['hinhanh'] ?>" width="150" height="100" />
-                                <p style="color:white;"><?php echo $dong_all['tenlk'] ?></p>
+                                <p style="color:black;"><?php echo $dong_all['tenlk'] ?></p>
                                 <p style="color:#0C0;"><?php echo $dong_all['gia'] ?> <?php echo "VNĐ" ?></p>
                                 <p style="color:#999;">Đặt món</p>
                             </a></li>

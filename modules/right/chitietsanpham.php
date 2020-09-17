@@ -14,7 +14,7 @@
 </table>
 <table width="350" height="auto" style="float:left; margin-left:20px; margin-top:5px; text-transform:uppercase; line-height:40px">
 <tr>
-<td>Tên thức ăn:<p style="color:white"><?php echo $dong_chitietsp['tensp'] ?></p>
+<td>Tên thức ăn:<p style="color:black"><?php echo $dong_chitietsp['tensp'] ?></p>
     			<p style="color:#0F0">Giá thức ăn:<?php echo $dong_chitietsp['gia']?> <?php echo "VNĐ" ?></p>
   				<a href="index.php?xem=giohang&add=<?php echo $dong_chitietsp['id_sp'] ?>"><img src="img/mua.PNG" height="40" width="150" style="float:left; border-radius:15px"/></a>	</td>
 </tr>

@@ -15,7 +15,7 @@
 				?>
                 	<li><a href="index.php?xem=chitietlinhkien&id=<?php echo $dong_chitiet['id_lk'] ?>">
                     	<img src="admincp/modules/quanlychitietlk/uploads/<?php echo $dong_chitiet['hinhanh'] ?>" width="150" height="100" />
-                    	<p style="color:white"><?php echo $dong_chitiet['tenlk'] ?></p>
+                    	<p style="color:black"><?php echo $dong_chitiet['tenlk'] ?></p>
                         <p style="color:#0C0"><?php echo $dong_chitiet['gia'] ?> <?php echo "VNĐ" ?></p>
                         <p style="color:#999;">Đặt món</p>
                     </a></li>
