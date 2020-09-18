@@ -1,4 +1,13 @@
 <?php
+  if (!function_exists('currency_format')) {
+    function currency_format($number, $suffix = 'đ') {
+        if (!empty($number)) {
+            return number_format($number, 0, ',', '.') . "{$suffix}";
+        }
+    }
+}
+?>
+<?php
 	$sql_chitiet="select * from chitietsp where id_loaisp='$_GET[id]'";
 	$query=sqlsrv_query($conn,$sql_chitiet);
 ?>
@@ -16,7 +25,7 @@
                 	<li><a href="index.php?xem=chitietsanpham&id=<?php   echo $dong_chitiet['id_sp'] ?>">
                     	<img src="admincp/modules/quanlychitietsp/uploads/<?php echo $dong_chitiet['hinhanh'] ?>" width="150" height="100" />
                     	<p style="color:black;"><?php echo $dong_chitiet['tensp'] ?></p>
-                        <p style="color:#0C0;"><?php echo $dong_chitiet['gia'] ?> <?php echo "VNĐ" ?></p>
+                        <p style="color:black;"><?php echo currency_format($dong_chitiet['gia']); ?> <?php echo "VNĐ" ?></p>
                         <p style="color:#999;">Đặt món</p>
                     </a></li>
                 <?php

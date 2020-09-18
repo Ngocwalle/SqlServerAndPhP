@@ -1,3 +1,12 @@
+<?php
+  if (!function_exists('currency_format')) {
+    function currency_format($number, $suffix = 'đ') {
+        if (!empty($number)) {
+            return number_format($number, 0, ',', '.') . "{$suffix}";
+        }
+    }
+}
+?>
 <table width="100%">
 	<tr>
     	<td>
@@ -27,7 +36,7 @@
                                 <li><a href="index.php?xem=chitietsanpham&id=<?php echo $dong_all['id_sp'] ?>">
                                     <img src="admincp/modules/quanlychitietsp/uploads/<?php echo $dong_all['hinhanh'] ?>" width="150" height="100" />
                                     <p style="color:black;"><?php echo $dong_all['tensp'] ?></p>
-                                    <p style="color:#0C0;"><?php echo $dong_all['gia']?> <?php echo "VNĐ" ?></p>
+                                    <p style="color:#0C0;"><?php echo currency_format($dong_all['gia']) ?> <?php echo "VNĐ" ?></p>
                                     <p style="color:#999;">Đặt món</p>
                                 </a></li>
                             <?php
@@ -84,7 +93,7 @@
                             <li><a href="index.php?xem=chitietlinhkien&id=<?php echo $dong_all['id_lk'] ?>">
                                 <img src="admincp/modules/quanlychitietlk/uploads/<?php echo $dong_all['hinhanh'] ?>" width="150" height="100" />
                                 <p style="color:black;"><?php echo $dong_all['tenlk'] ?></p>
-                                <p style="color:#0C0;"><?php echo $dong_all['gia'] ?> <?php echo "VNĐ" ?></p>
+                                <p style="color:#0C0;"><?php echo currency_format($dong_all['gia']) ?> <?php echo "VNĐ" ?></p>
                                 <p style="color:#999;">Đặt món</p>
                             </a></li>
                         <?php
